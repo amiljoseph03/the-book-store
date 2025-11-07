@@ -4,6 +4,7 @@ import Auth from './Pages/Auth'
 import Allbook from './Users/Pages/Allbook'
 import Career from './Users/Pages/Career'
 import Contact from './Users/Pages/Contact'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css'
 
