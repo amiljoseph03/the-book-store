@@ -1,6 +1,10 @@
 import React from 'react'
-import { CiTwitter } from 'react-icons/ci';
+
 import { Link } from 'react-router-dom';
+import { CiTwitter } from 'react-icons/ci';
+import { FaFacebookF } from 'react-icons/fa';
+import { CiUser } from 'react-icons/ci';
+import { FaBarsProgress } from 'react-icons/fa6';
 
 function Header() {
   return (
@@ -70,11 +74,20 @@ function Header() {
       </div>
 
 
-
-
-
       <nav className='w-full p-3 bg-black text-white md:flex
-      justify-center items-center'></nav>
+      justify-center items-center'>
+        {/* menubar nd logi n  */}
+        <div className="flex justify-between items-center text-2xl md:hidden">
+            <button><FaBarsProgress className='text-white'/> </button>
+            <Link to={"/login"}>
+            <button className='border border-black
+            rounded px-3 py-2 ms-3 hover:bg-black hover:text-white'>
+                {" "} <CiUser/>
+                Login {" "}
+            </button>
+            </Link>
+        </div>
+      </nav>
     </>
   );
 }
