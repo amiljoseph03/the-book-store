@@ -73,20 +73,62 @@ function Header() {
         </div>
       </div>
 
-
-      <nav className='w-full p-3 bg-black text-white md:flex
-      justify-center items-center'>
+      <nav
+        className="w-full p-3 bg-black text-white md:flex
+      justify-center items-center"
+      >
         {/* menubar nd logi n  */}
         <div className="flex justify-between items-center text-2xl md:hidden">
-            <button><FaBarsProgress className='text-white'/> </button>
-            <Link to={"/login"}>
-            <button className='border border-black
-            rounded px-3 py-2 ms-3 hover:bg-black hover:text-white'>
-                {" "} <CiUser/>
-                Login {" "}
+          <button>
+            <FaBarsProgress className="text-white" />{' '}
+          </button>
+          <Link to={'/login'}>
+            <button
+              className="border border-black
+            rounded px-3 py-2 ms-3 hover:bg-black hover:text-white"
+            >
+              {' '}
+              <CiUser />
+              Login{' '}
             </button>
-            </Link>
+          </Link>
+
+          <div className="relative inline-block text-left">
+            <button
+              className="w-full px-3 py-2 bg-gray-500
+                shadow-xs hover:bg-gray-50 rounded"
+            >
+              <img
+                width={'40px'}
+                height={'40px'}
+                style={{ borderRadius: '50%' }}
+                className="mx-2"
+                src=""
+                alt="user"
+              />
+            </button>
+            dropdownstatus &&
+            <div
+              className="absolute right-0 z-10 mt-2 w-40
+                origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5
+                focus:outline-hidden"
+            >
+              <div className="py-1">
+                <Link
+                  className="block px-4 py-2 text-sm text-gray-700"
+                  to={'/profile'}
+                >
+                  profile
+                </Link>
+                <button className="block px-4 py-2 text-sm text-gray-700">
+                  logout
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <ul className="md:flex justify-center items-center hidden"></ul>
       </nav>
     </>
   );
