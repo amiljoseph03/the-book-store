@@ -80,7 +80,7 @@ function Header() {
         className="w-full p-3 bg-black text-white md:flex
       justify-center items-center"
       >
-        {/* menubar nd logi n  */}
+        {/* menubar nd login  */}
         <div className="flex justify-between items-center text-2xl md:hidden">
           <button onClick={()=>setlistStatus(!listStatus)}>
             <FaBarsProgress className="text-white" />{' '}
