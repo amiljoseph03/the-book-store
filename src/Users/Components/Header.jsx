@@ -9,7 +9,7 @@ import { FaBarsProgress } from 'react-icons/fa6';
 function Header() {
 
     const[listStatus,setlistStatus]=useState(false)
-    
+
   return (
     <>
       <div className="grid grid-cols-3 p-3">
@@ -82,7 +82,7 @@ function Header() {
       >
         {/* menubar nd logi n  */}
         <div className="flex justify-between items-center text-2xl md:hidden">
-          <button>
+          <button onClick={()=>setlistStatus(!listStatus)}>
             <FaBarsProgress className="text-white" />{' '}
           </button>
           <Link to={'/login'}>
@@ -131,7 +131,7 @@ function Header() {
           </div>
         </div>
 
-        <ul className="md:flex justify-center items-center hidden">
+        <ul className={listStatus?" flex flex-col" :"md:flex justify-center items-center hidden"}>
             <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/'}>Home</Link></li>
             <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/all-books'}>Books</Link></li>
             <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/careers'}>Careers</Link></li>
