@@ -7,6 +7,9 @@ import { CiUser } from 'react-icons/ci';
 import { FaBarsProgress } from 'react-icons/fa6';
 
 function Header() {
+
+    const[listStatus,setlistStatus]=useState(false)
+    
   return (
     <>
       <div className="grid grid-cols-3 p-3">
@@ -128,7 +131,12 @@ function Header() {
           </div>
         </div>
 
-        <ul className="md:flex justify-center items-center hidden"></ul>
+        <ul className="md:flex justify-center items-center hidden">
+            <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/'}>Home</Link></li>
+            <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/all-books'}>Books</Link></li>
+            <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/careers'}>Careers</Link></li>
+            <li className='md:mx-4 mt-3 md:mt-0'><Link to={'/contact'}>Contact</Link></li>
+        </ul>
       </nav>
     </>
   );
