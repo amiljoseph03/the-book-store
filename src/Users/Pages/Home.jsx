@@ -21,6 +21,28 @@ function Home() {
          style={{margin:'10px',fontSize:'30px'}}
          />
           </div>
+
+
+          {/* new arrivals  */}
+          <section>
+            <h1>Nwe Arrivals</h1>
+            <h1>Exploere our latest collection</h1>
+            <div>
+              <div>
+                <img src="" alt="" />
+                <div>
+                  <p>author</p>
+                  <p>booktitle</p>
+                  <p>discountprice</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="text-center my-10">
+              <Link to={'/all-books'}>explore more..</Link>
+            </div>
+          </section>
         </div>
       </div>
     </>
