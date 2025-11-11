@@ -10,6 +10,10 @@ function Contact() {
           <p className="mt-3 text-gray-200 text-lg">
             We’d love to hear from you! Send us a message or find us on the map
             below.
+            We’d love to hear from you! Send us a message or find us on the map
+            below.
+            We’d love to hear from you! Send us a message or find us on the map
+            below.
           </p>
         </div>
 

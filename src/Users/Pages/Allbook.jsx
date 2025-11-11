@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import { FaBarsProgress } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 function Allbook() {
   return (
@@ -32,6 +33,12 @@ function Allbook() {
         {/* books  */}
         <div className="col-span-3">
           <div className="md:grid grid-cols-4"></div>
+        
+        
+        
+        <p>book</p>
+        <Link to={'/all-books/:id/view'}/>
+        
         </div>
       </div>
     </>
