@@ -30,6 +30,10 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* USER*/}
         <Route path="/all-books/:id/view" element={<Viewbook />} />{' '}
+        <Route path='/profile' element={<Profile/>} />
+       
+        {/* admin  */}
+        <Route path="/admin" element={<Dashboard />} />
       </Routes>
     </>
   );
