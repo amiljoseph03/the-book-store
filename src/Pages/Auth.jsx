@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CiUser } from 'react-icons/ci';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Auth = ({ register }) => {
+  const [viewPasswordStatus, setViewPasswordStatus] = useState(false);
+
   return (
     <>
       <div className="w-full min-h-screen flex justify-center items-center flex-col bg-[url('https://i.pinimg.com/736x/04/69/43/04694308bd295274bed00679e53bf85c.jpg')] bg-cover bg-center">
@@ -32,15 +36,60 @@ const Auth = ({ register }) => {
                 className="bg-white p-3 w-full rounded placeholder-gray-500 mb-5 text-black"
               />
 
-              <input
-                placeholder="Password"
-                type="password"
-                className="bg-white p-3 w-full rounded placeholder-gray-500 mb-5 text-black"
-              />
+              <div className="flex items-center">
+                <input
+                  placeholder="Password"
+                  type={viewPasswordStatus ? 'text' : 'password'}
+                  className="bg-white p-3 w-full rounded placeholder-gray-500 mb-3 text-black"
+                />
 
-              <button className="bg-blue-700 w-full p-3 rounded font-bold">
-                {register ? 'Register Now' : 'Login'}
-              </button>
+                {!viewPasswordStatus ? (
+                  <FaEye
+                    onClick={() => setViewPasswordStatus(!viewPasswordStatus)}
+                    style={{ marginLeft: '-30px' }}
+                    className="text-gray-500 cursor-pointer"
+                  />
+                ) : (
+                  <FaEyeSlash
+                    onClick={() => setViewPasswordStatus(!viewPasswordStatus)}
+                    style={{ marginLeft: '-30px' }}
+                    className="text-gray-500 cursor-pointer"
+                  />
+                )}
+              </div>
+
+              <div>
+                <p>never share pswrd with others</p>
+                <button>forgot password</button>
+              </div>
+
+<div className="text-center">
+  {
+    register?
+    <button className='bg-green-400'>register</button> :
+    <button className='bg-green-400'>login</button>
+  }
+</div>
+
+
+
+              <div className="my-5 text-center">
+                {register ? (
+                  <p className="text-blue-600">
+                    Are you an already existing user?
+                    <Link to="/login" className="underline ms-2">
+                      Login
+                    </Link>
+                  </p>
+                ) : (
+                  <p className="text-blue-600">
+                    Are you a new user?
+                    <Link to="/register" className="underline ms-2">
+                      Register
+                    </Link>
+                  </p>
+                )}
+              </div>
             </form>
           </div>
         </div>

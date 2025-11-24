@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState ,useEffect} from 'react'
 
 import Home from './Users/Pages/Home' 
 
@@ -14,8 +14,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Users/Components/Header';
 
 import './App.css'
+import Preloader from './Components/Preloader'
 
 function App() {
+
+  const[loading,setLoading]=useState(true)
+  useEffect(()=>{
+    setTimeout(()=>{
+      setLoading(false)
+
+    },5000)
+  },[])
   const [count, setCount] = useState(0)
 
   return (
@@ -24,7 +33,7 @@ function App() {
       {/* <h1>Book Store</h1> */}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={loading?<Preloader/>:<Home />} />
 
         <Route path="/login" element={<Auth />} />
         <Route path="/register" element={<Auth register />} />
