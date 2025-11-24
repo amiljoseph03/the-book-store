@@ -1,9 +1,14 @@
 import { useState } from 'react'
-import Home from './Users/Pages/Allbook'
+
+import Home from './Users/Pages/Home' 
+
 import Auth from './Pages/Auth'
 import Allbook from './Users/Pages/Allbook'
 import Career from './Users/Pages/Career'
 import Contact from './Users/Pages/Contact'
+import Viewbook from './Users/Pages/Viewbook'
+import Profile from './Users/Pages/Profile'
+import Dashboard from './Admin/Pages/Dashboard'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Header from './Users/Components/Header';
@@ -15,8 +20,8 @@ function App() {
 
   return (
     <>
-      {/* <Header />
-      <h1>Book Store</h1> */}
+      <Header />
+      {/* <h1>Book Store</h1> */}
 
       <Routes>
         <Route path="/" element={<Home />} />

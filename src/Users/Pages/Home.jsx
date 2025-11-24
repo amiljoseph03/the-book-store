@@ -1,36 +1,35 @@
 import React from 'react';
+import Header from '../Components/Header';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function Home() {
   return (
     <>
-      {/* Hero Section */}
+      {/* <Header/> */}
+
+      {/* landing */}
       <div
-        className="relative flex flex-col justify-center items-center text-white bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('https://i.pinimg.com/736x/cb/64/7e/cb647e178bbccfb7498002aa2d070f18.jpg')",
-          height: '500px',
-        }}
+        style={{ height: '500px' }}
+        className="flex flex-col justify-center items-center bg-[url('https://www.entertales.com/wp-content/uploads/635841049393339322-1773368249_o-PILE-OF-BOOKS-facebook.jpg')] bg-cover bg-center text-white"
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div
+          style={{ height: '500px', backgroundColor: 'rgba(0,0,0,0.5)' }}
+          className="w-full flex flex-col justify-center items-center"
+        >
+          <h1 className="text-5xl font-bold">Wonderful Gifts</h1>
+          <p>Give your family and friends a book</p>
 
-        {/* Text & Search Box */}
-        <div className="relative z-10 text-center">
-          <h1 className="text-5xl font-bold mb-3">Wonderful Gifts</h1>
-          <p className="mb-5 text-lg">
-            Give your family and friends the gift of reading
-          </p>
-
-          <div className="mt-3 flex justify-center items-center">
+          <div className="mt-9 flex">
             <input
-              className="bg-white p-2 rounded-3xl placeholder-gray-500 text-black w-64"
               type="text"
-              placeholder="Search a book"
+              placeholder="Search Books"
+              className="bg-white p-2 rounded-3xl placeholder-gray-500 w-full text-black"
             />
-            <FaSearch className="text-gray-300 ml-3 text-2xl cursor-pointer" />
+            <FaSearch
+              className="text-gray-500"
+              style={{ margin: '10px', fontSize: '30px' }}
+            />
           </div>
         </div>
       </div>
