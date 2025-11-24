@@ -20,13 +20,15 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       {/* <h1>Book Store</h1> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/login" element={<Auth />} />
-        <Route path="/register" element={<Auth />} />
+        <Route path="/register" element={<Auth register />} />
+
         <Route path="/all-books" element={<Allbook />} />
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
@@ -35,10 +37,12 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* USER*/}
         <Route path="/all-books/:id/view" element={<Viewbook />} />{' '}
-        <Route path='/profile' element={<Profile/>} />
-       
+        <Route path="/profile" element={<Profile />} />
         {/* admin  */}
         <Route path="/admin" element={<Dashboard />} />
+
+
+      
       </Routes>
     </>
   );
