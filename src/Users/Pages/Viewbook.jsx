@@ -29,6 +29,10 @@ function Viewbook() {
                 <p>language : language</p>
                 <p>no.of pages</p>
                 <p>seller mail </p>
+                <p>Real Price </p>
+                <p>ISBN </p>
+                <p>Category</p>
+               
               </div>
               <div className="md:my-10my-4">
                 <p>abstract</p>
