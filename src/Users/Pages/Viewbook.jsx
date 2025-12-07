@@ -1,5 +1,10 @@
 import React from 'react'
 import Header from '../Components/Header'
+import { FaEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { IoChevronBackCircle } from 'react-icons/io5';
+
+
 
 
 function Viewbook() {
@@ -29,7 +34,7 @@ function Viewbook() {
                 <p>abstract</p>
               </div>
               <div className="flex justify-end">
-                <Link to={'all-books'}><IoChevronBackCircleSharp/> back</Link>
+                <Link to={'all-books'}><IoChevronBackCircle/> back</Link>
                 <button>Buy $888</button>
               </div>
             </div>
