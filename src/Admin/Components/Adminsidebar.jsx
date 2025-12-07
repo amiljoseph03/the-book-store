@@ -18,7 +18,7 @@ function Adminsidebar() {
 
       {/* Sidebar menu */}
       <div className="mt-8 space-y-4 text-lg">
-        <Link to="/admin-dashboard" className="flex items-center gap-2">
+        <Link to="/admin" className="flex items-center gap-2">
           <CiHome size={22} /> Home
         </Link>
 
